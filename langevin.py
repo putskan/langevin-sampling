@@ -19,7 +19,6 @@ def plot_gaussian_ellipse(ax, mu: np.ndarray, cov: np.ndarray,
                           plot_eigenvectors: bool = True, color: str = 'orange'):
     theta = np.linspace(0, 2 * np.pi, 100)
     eigenvalues, eigenvectors = np.linalg.eigh(cov)
-
     P = eigenvectors[:, ::-1]
 
     for l in range(1, 3):
@@ -40,7 +39,6 @@ def plot_gaussian_ellipse(ax, mu: np.ndarray, cov: np.ndarray,
 
 np.random.seed(0)
 n_steps = 5000
-# n_steps = 15
 eps = 0.001
 n_samples = 750
 
